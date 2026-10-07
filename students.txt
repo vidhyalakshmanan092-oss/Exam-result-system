@@ -1,0 +1,8 @@
+101,Aarav Sharma,88,92,79,85,90
+102,Diya Patel,95,98,91,89,94
+103,Rohan Verma,72,65,70,68,75
+104,Ananya Iyer,88,92,79,85,90
+105,Karthik Reddy,55,48,60,52,58
+106,Sneha Nair,81,77,84,90,79
+107,Imran Khan,35,42,38,45,40
+108,Meera Joshi,91,86,93,88,87
