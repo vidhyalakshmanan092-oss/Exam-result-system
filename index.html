@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Exam Result Ranking System</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>🏆 Exam Result Ranking System</h1>
+  <p>DSA Mini Project &middot; C backend (merge sort + binary search) &middot; HTML/CSS/JS frontend</p>
+</header>
+<main>
+  <section class="stats" id="stats"></section>
+  <section class="podium" id="podium"></section>
+
+  <section class="card">
+    <h2 id="formTitle">Add Student</h2>
+    <form id="form" autocomplete="off">
+      <div class="grid">
+        <label>Roll No<input type="number" id="roll" min="1" required></label>
+        <label class="wide">Name<input type="text" id="name" maxlength="49" required></label>
+        <label>Maths<input type="number" class="mark" min="0" max="100" required></label>
+        <label>DSA<input type="number" class="mark" min="0" max="100" required></label>
+        <label>Physics<input type="number" class="mark" min="0" max="100" required></label>
+        <label>English<input type="number" class="mark" min="0" max="100" required></label>
+        <label>Chemistry<input type="number" class="mark" min="0" max="100" required></label>
+      </div>
+      <div class="row">
+        <button type="submit" id="saveBtn">Add Student</button>
+        <button type="button" class="ghost" id="cancelBtn" hidden>Cancel edit</button>
+        <span id="msg"></span>
+      </div>
+    </form>
+  </section>
+
+  <section class="card">
+    <div class="toolbar">
+      <h2>Rank List</h2>
+      <div class="row">
+        <select id="sort">
+          <option value="rank">Sort: Rank</option>
+          <option value="roll">Sort: Roll No</option>
+          <option value="name">Sort: Name (A-Z)</option>
+        </select>
+        <input type="number" id="searchRoll" placeholder="Search roll no" min="1">
+        <button id="searchBtn">Binary Search</button>
+      </div>
+    </div>
+    <div id="searchResult"></div>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>Rank</th><th>Roll</th><th>Name</th><th>Maths</th><th>DSA</th><th>Physics</th><th>English</th><th>Chem</th><th>Total</th><th>%</th><th>Result</th><th></th></tr></thead>
+        <tbody id="rows"></tbody>
+      </table>
+    </div>
+  </section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
